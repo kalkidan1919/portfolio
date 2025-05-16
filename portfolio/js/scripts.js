@@ -52,3 +52,48 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+window.addEventListener("DOMContentLoaded", () => {
+  const typedTextElement = document.getElementById("typed-text");
+
+  const phrases = [
+    "a passionate Software Engineering Student 💡",
+    "Aspiring Full-Stack Developer 👩‍💻",
+    "Excited about Web Development & Tech Leadership 🚀",
+  ];
+
+  let currentPhraseIndex = 0;
+  let currentCharIndex = 0;
+  let isDeleting = false;
+
+  const typingSpeed = 60;
+  const deletingSpeed = 30;
+  const pauseBeforeDelete = 1500;
+  const pauseBeforeType = 500;
+
+  function typeEffect() {
+    const currentPhrase = phrases[currentPhraseIndex];
+    let displayText = currentPhrase.substring(0, currentCharIndex);
+
+    typedTextElement.textContent = displayText;
+
+    if (!isDeleting && currentCharIndex < currentPhrase.length) {
+      currentCharIndex++;
+      setTimeout(typeEffect, typingSpeed);
+    } else if (isDeleting && currentCharIndex > 0) {
+      currentCharIndex--;
+      setTimeout(typeEffect, deletingSpeed);
+    } else {
+      if (!isDeleting) {
+        isDeleting = true;
+        setTimeout(typeEffect, pauseBeforeDelete);
+      } else {
+        isDeleting = false;
+        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+        setTimeout(typeEffect, pauseBeforeType);
+      }
+    }
+  }
+
+  setTimeout(typeEffect, 1000); // Delay start for smooth entrance
+});
+  
