@@ -103,6 +103,10 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+#ABOUT{
+  background-color: rgb(224, 224, 235);
+}
+##portfolio
 .masthead-subheading {
   font-size: 20px;
   font-weight: 500;
@@ -10995,13 +10999,14 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/header-bg.jpg");
+  background-image: url("../assets/img/images/b1.jpg");
   background-color: #252428;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
 }
+
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
   font-style: italic;
@@ -11306,7 +11311,7 @@ header.masthead .masthead-heading {
 
 section#contact {
   background-color: #212529;
-  background-image: url("../assets/img/map-image.png");
+  background-image: url("../assets/img/images/b1.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
