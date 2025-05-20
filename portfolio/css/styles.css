@@ -103,10 +103,21 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+/* #page-top{
+  background-image:url("../assets/img/images/b3.jpg") ;
+} */
+.profile-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  border: 3px solid #ffc107;
+  border-radius: 50%;
+}
 #ABOUT{
   background-color: rgb(224, 224, 235);
 }
-##portfolio
+
 .masthead-subheading {
   font-size: 20px;
   font-weight: 500;
