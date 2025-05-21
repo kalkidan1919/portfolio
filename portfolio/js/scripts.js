@@ -96,4 +96,3 @@ window.addEventListener("DOMContentLoaded", () => {
 
   setTimeout(typeEffect, 1000); // Delay start for smooth entrance
 });
-  

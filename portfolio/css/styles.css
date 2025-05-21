@@ -99,7 +99,7 @@ body {
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  /* background-color: var(--bs-body-bg); */
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -115,7 +115,61 @@ body {
   border-radius: 50%;
 }
 #ABOUT{
-  background-color: rgb(224, 224, 235);
+  background-color: rgba(128,128,128);
+}
+#ABOUT .text-muted {
+  color: white !important;
+}
+#portfolio{
+  background-color: 105,105,105;
+}
+
+/* Footer black background and white text */
+.footer {
+  background-color: #000000!important; /* black */
+  color: white;
+  padding: 60px 0;
+}
+#CONTACTP{
+  color:yellow;
+}
+
+/* "Contact Me" styling */
+#contact {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Social button style */
+#btn-social a.btn-social {
+  background-color: transparent;
+  border: 2px solid #ffc107;
+  color: #ffc107; /* yellow icons */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 46px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  margin: 0 8px;
+}
+
+/* Hover effect */
+#btn-social a.btn-social:hover {
+  background-color: #ffc107;
+  color: #000000;
+  transform: translateY(-5px);
+}
+
+/* Padding above the centered content */
+#btn-social {
+  padding-top: 40px;
 }
 
 .masthead-subheading {
