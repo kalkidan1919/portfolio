@@ -96,3 +96,40 @@ window.addEventListener("DOMContentLoaded", () => {
 
   setTimeout(typeEffect, 1000); // Delay start for smooth entrance
 });
+const form = document.getElementById("contactForm");
+const alertBox = document.getElementById("formAlert");
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  const submitButton = document.getElementById("submitButton");
+  submitButton.disabled = true;
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      alertBox.className = "alert alert-success text-center";
+      alertBox.innerText = "✅ Message sent successfully!";
+      alertBox.classList.remove("d-none");
+      form.reset();
+    } else {
+      alertBox.className = "alert alert-danger text-center";
+      alertBox.innerText = "❌ Oops! Something went wrong. Please try again.";
+      alertBox.classList.remove("d-none");
+    }
+  } catch (error) {
+    alertBox.className = "alert alert-danger text-center";
+    alertBox.innerText = "❌ Network error. Please check your connection.";
+    alertBox.classList.remove("d-none");
+  } finally {
+    submitButton.disabled = false;
+  }
+});
