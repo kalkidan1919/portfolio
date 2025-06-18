@@ -1,9 +1,12 @@
 {
+  "homepage": "https://kalkidan1919.github.io/portfolio",
   "name": "portfolio",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "build": "echo 'No build step needed for plain HTML/CSS/JS.'"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,8 @@
     "url": "https://github.com/kalkidan1919/portfolio/issues"
   },
   "homepage": "https://github.com/kalkidan1919/portfolio#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
