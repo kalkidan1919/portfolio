@@ -1,0 +1,25 @@
+{
+  "homepage": "https://kalkidan1919.github.io/portfolio",
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d .",
+    "build": "echo 'No build step needed for plain HTML/CSS/JS.'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalkidan1919/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kalkidan1919/portfolio/issues"
+  },
+  "homepage": "https://github.com/kalkidan1919/portfolio#readme",
+  "description": "",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
